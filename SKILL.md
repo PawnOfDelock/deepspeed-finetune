@@ -66,6 +66,15 @@ Training scripts must:
 `remote_train.py launch` creates `.remote_train_session.json` locally with connection info.
 Subsequent `status`, `logs`, `stop` commands auto-read this file — no need to repeat args.
 
+### ⚠️ Security Warning
+
+**Password Storage**: This tool stores SSH passwords in **plaintext** in the `.remote_train_session.json` session file (located in the working directory). This file is excluded from Git via `.gitignore`, but anyone with access to your local filesystem can read it.
+
+**Recommendations**:
+- Use SSH key authentication instead of passwords when possible
+- Delete `.remote_train_session.json` when no longer needed
+- Ensure proper file permissions on the working directory
+
 ## Core Capabilities
 
 ### 0. Plan Selection Workflow (Important!)
