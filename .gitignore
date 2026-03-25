@@ -1,0 +1,5 @@
+.remote_train_session.json
+*.pyc
+__pycache__/
+output*/
+train_log.txt
